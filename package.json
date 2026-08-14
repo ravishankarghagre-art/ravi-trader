@@ -1,0 +1,13 @@
+{
+  "name": "ravi-traders-mcp-render",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Remote Streamable HTTP MCP server for the Ravi Traders invoice application",
+  "scripts": {"start": "node src/index.js"},
+  "engines": {"node": ">=18"},
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.0",
+    "zod": "^3.25.76"
+  }
+}

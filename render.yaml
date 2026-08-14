@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: ravi-traders-mcp
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: RAVI_SUPABASE_URL
+        sync: false
+      - key: RAVI_SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: RAVI_MCP_BEARER_TOKEN
+        sync: false
