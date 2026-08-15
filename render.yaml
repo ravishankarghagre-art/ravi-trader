@@ -5,3 +5,16 @@ services:
     buildCommand: npm install
     startCommand: npm start
     healthCheckPath: /health
+    envVars:
+      - key: RAVI_SUPABASE_URL
+        sync: false
+      - key: RAVI_SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: OAUTH_ISSUER
+        sync: false
+      - key: OAUTH_AUDIENCE
+        sync: false
+      - key: MCP_RESOURCE_URL
+        sync: false
+      - key: OAUTH_REQUIRED_SCOPE
+        sync: false

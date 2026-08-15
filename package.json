@@ -1,11 +1,1 @@
-{
-  "name": "ravi-traders-mcp",
-  "version": "3.0.0",
-  "private": true,
-  "type": "module",
-  "scripts": { "start": "node src/index.js" },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.17.5",
-    "zod": "^3.25.76"
-  }
-}
+{"name":"ravi-traders-mcp","version":"4.0.0","private":true,"type":"module","description":"OAuth protected Streamable HTTP MCP server for Ravi Traders","scripts":{"start":"node src/index.js"},"engines":{"node":">=18"},"dependencies":{"@modelcontextprotocol/sdk":"^1.17.0","jose":"^6.1.0","zod":"^3.25.76"}}

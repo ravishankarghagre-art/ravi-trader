@@ -1,19 +1,15 @@
-# Ravi Traders MCP v3
+# Ravi Traders MCP V4 — OAuth Ready
 
-Remote Streamable HTTP MCP server for the Ravi Traders Supabase database.
+Read-only Ravi Traders MCP server using Streamable HTTP and OAuth/OIDC resource-server validation.
 
-## Endpoint
+The server does not issue OAuth tokens. An external OAuth/OIDC provider must issue access tokens and expose discovery/JWKS metadata.
+
+Required provider capabilities: Authorization Code + PKCE, discovery, JWT access tokens, JWKS, refresh tokens/offline_access, and a client-registration method accepted by the MCP host.
+
+Endpoints:
 - GET /health
+- GET /.well-known/oauth-protected-resource
+- GET /.well-known/oauth-protected-resource/mcp
 - POST/GET/DELETE /mcp
 
-## Render
-Build: `npm install`
-Start: `npm start`
-
-## Environment variables
-- `RAVI_SUPABASE_URL`
-- `RAVI_SUPABASE_SERVICE_ROLE_KEY`
-- `RAVI_MCP_BEARER_TOKEN`
-- `RAVI_ALLOW_WRITE=false`
-
-This version is read-only. It intentionally exposes no payment, refund, invoice-create/edit, or other database-write tool.
+16 read-only tools are exposed. No payment creation, refunds, Razorpay actions, invoice writes, or database writes.
